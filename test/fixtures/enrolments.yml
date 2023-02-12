@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  number: MyString
+  date: 2023-02-12 14:20:17
+  student: one
+  course: one
+
+two:
+  number: MyString
+  date: 2023-02-12 14:20:17
+  student: two
+  course: two

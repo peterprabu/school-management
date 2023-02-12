@@ -1,0 +1,6 @@
+<% if user_signed_in? %>
+  <p>Hello, <%= current_user.email %>
+    <p> You have successfully authenticated!
+<% else %>
+  <h3>Hello, Welcome!
+<% end %>
