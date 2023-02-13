@@ -24,7 +24,7 @@ rails db:setup
 rails db:migrate
 rails db:seed
 ```
-DB recreation:
+If needed (DB recreation):
 
 ```ruby
 rails db:drop db:create db:migrate db:seed
