@@ -24,6 +24,11 @@ rails db:setup
 rails db:migrate
 rails db:seed
 ```
+DB recreation:
+
+```ruby
+rails db:drop db:create db:migrate db:seed
+```
 
 ##### 3. Start the Rails server
 
