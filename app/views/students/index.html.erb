@@ -23,7 +23,7 @@
         <td><%= student.email %></td>
         <td><%= student.age %></td>
         <td><%= student.sex %></td>
-        <td><%= student.school.name %></td>
+        <td><%= student.school&.name %></td>
         <td><%= link_to 'Show', student %></td>
         <td><%= link_to 'Edit', edit_student_path(student) %></td>
         <td><%= button_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>

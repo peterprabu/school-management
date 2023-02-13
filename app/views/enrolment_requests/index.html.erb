@@ -18,11 +18,11 @@
         <td><%= enrolment_request.course.name %></td>
         <td><%= enrolment_request.batch.name %></td>
         <td><%= enrolment_request.status %></td>
-        <% if current_user.role == 'user' && enrolment_request.status == 'pending'%>
+        <% if current_user&.role == 'user' && enrolment_request.status == 'pending'%>
           <td><%= link_to 'Show', enrolment_request %></td>
           <td><%= link_to 'Edit', edit_enrolment_request_path(enrolment_request) %></td>
           <td><%= button_to 'Destroy', enrolment_request, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% elsif current_user.role != 'user'%>
+        <% elsif current_user&.role != 'user'%>
           <td><%= button_to 'Approve', approve_enrolment_request_path(enrolment_request), class: 'btn btn-success' %></td>
           <td><%= button_to 'Decline', decline_enrolment_request_path(enrolment_request), class: 'btn btn-danger' %></td>
           <td colspan="3"></td>
@@ -34,6 +34,6 @@
 
 <br>
 
-<% if current_user.role == 'user' %>
+<% if current_user&.role == 'user' %>
   <%= link_to 'New Enrolment Request', new_enrolment_request_path, class: 'btn btn-secondary' %>
 <% end %>

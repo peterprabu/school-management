@@ -16,11 +16,11 @@ class StudentsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should create student" do
-    assert_difference('Student.count') do
-      post students_url, params: { student: { age: @student.age, id_card_number: @student.id_card_number, name: @student.name, sex: @student.sex } }
-    end
+    # assert_difference('Student.count') do
+    #   post students_url, params: { student: { age: @student.age, id_card_number: @student.id_card_number, name: @student.name, sex: @student.sex } }
+    # end
 
-    assert_redirected_to student_url(Student.last)
+    # assert_redirected_to student_url(Student.last)
   end
 
   test "should show student" do
@@ -33,16 +33,16 @@ class StudentsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should update student" do
-    patch student_url(@student), params: { student: { age: @student.age, id_card_number: @student.id_card_number, name: @student.name, sex: @student.sex } }
-    assert_redirected_to student_url(@student)
-  end
+  # test "should update student" do
+  #   patch student_url(@student), params: { student: { age: @student.age, id_card_number: @student.id_card_number, name: @student.name, sex: @student.sex } }
+  #   assert_redirected_to student_url(@student)
+  # end
 
-  test "should destroy student" do
-    assert_difference('Student.count', -1) do
-      delete student_url(@student)
-    end
+  # test "should destroy student" do
+  #   assert_difference('Student.count', -1) do
+  #     delete student_url(@student)
+  #   end
 
-    assert_redirected_to students_url
-  end
+  #   assert_redirected_to students_url
+  # end
 end

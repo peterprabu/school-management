@@ -19,7 +19,7 @@
         <td><%= batch.name %></td>
         <td><%= batch.code %></td>
         <td><%= batch.description %></td>
-        <td><%= batch.course.name %></td>
+        <td><%= batch.course&.name %></td>
         <td><%= link_to 'Show', batch %></td>
         <td><%= link_to 'Edit', edit_batch_path(batch) %></td>
         <td><%= button_to 'Destroy', batch, method: :delete, data: { confirm: 'Are you sure?' } %></td>

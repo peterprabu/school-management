@@ -22,7 +22,7 @@ class EnrolmentRequestsController < ApplicationController
   # POST /enrolment_requests or /enrolment_requests.json
   def create
     @enrolment_request = EnrolmentRequest.new(enrolment_request_params)
-    @enrolment_request.student_id = Student.where(email: current_user.email).first.id
+    @enrolment_request.student_id = Student.where(email: current_user&.email).first.id
 
     respond_to do |format|
       if @enrolment_request.save

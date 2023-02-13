@@ -19,9 +19,9 @@
       <tr>
         <td><%= enrolment.number %></td>
         <td><%= enrolment.date %></td>
-        <td><%= enrolment.student.name %></td>
-        <td><%= enrolment.course.name %></td>
-        <td><%= enrolment.batch.name %></td>
+        <td><%= enrolment.student&.name %></td>
+        <td><%= enrolment.course&.name %></td>
+        <td><%= enrolment.batch&.name %></td>
         <td><%= link_to 'Show', enrolment %></td>
         <td><%= link_to 'Edit', edit_enrolment_path(enrolment) %></td>
         <td><%= button_to 'Destroy', enrolment, method: :delete, data: { confirm: 'Are you sure?' } %></td>

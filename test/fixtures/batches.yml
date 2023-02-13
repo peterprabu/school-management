@@ -4,8 +4,10 @@ one:
   name: MyString
   code: MyString
   description: MyText
+  course_id: 1
 
 two:
   name: MyString
   code: MyString
   description: MyText
+  course_id: 2

@@ -5,9 +5,11 @@ one:
   date: 2023-02-12 14:20:17
   student: one
   course: one
+  batch_id: 1
 
 two:
   number: MyString
   date: 2023-02-12 14:20:17
   student: two
   course: two
+  batch_id: 2
