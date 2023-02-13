@@ -22,6 +22,7 @@ Run the following commands to create and setup the database.
 ```ruby
 rails db:setup
 rails db:migrate
+rails db:seed
 ```
 
 ##### 3. Start the Rails server
