@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_02_12_152308) do
+ActiveRecord::Schema.define(version: 2023_02_13_073310) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,17 @@ ActiveRecord::Schema.define(version: 2023_02_12_152308) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "school_id", null: false
     t.index ["school_id"], name: "index_courses_on_school_id"
+  end
+
+  create_table "enrolment_requests", force: :cascade do |t|
+    t.bigint "course_id", null: false
+    t.bigint "batch_id", null: false
+    t.string "status", default: "pending"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "student_id"
+    t.index ["batch_id"], name: "index_enrolment_requests_on_batch_id"
+    t.index ["course_id"], name: "index_enrolment_requests_on_course_id"
   end
 
   create_table "enrolments", force: :cascade do |t|
@@ -85,6 +96,8 @@ ActiveRecord::Schema.define(version: 2023_02_12_152308) do
 
   add_foreign_key "batches", "courses"
   add_foreign_key "courses", "schools"
+  add_foreign_key "enrolment_requests", "batches"
+  add_foreign_key "enrolment_requests", "courses"
   add_foreign_key "enrolments", "batches"
   add_foreign_key "enrolments", "courses"
   add_foreign_key "enrolments", "students"

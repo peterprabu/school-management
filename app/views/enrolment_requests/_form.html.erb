@@ -1,0 +1,27 @@
+<%= form_with(model: enrolment_request, local: true) do |form| %>
+  <% if enrolment_request.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(enrolment_request.errors.count, "error") %> prohibited this enrolment_request from being saved:</h2>
+
+      <ul>
+        <% enrolment_request.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field mb-3">
+    <%= form.label :course, class: 'form-label' %>
+    <%= form.collection_select :course_id, Course.order(:name),:id,:name, include_blank: true %>
+  </div>
+
+  <div class="field mb-3">
+    <%= form.label :batch, class: 'form-label' %>
+    <%= form.collection_select :batch_id, Batch.order(:name),:id,:name, include_blank: true %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

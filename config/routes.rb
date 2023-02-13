@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :enrolment_requests do
+    post :approve, on: :member
+    post :decline, on: :member
+  end
+
   resources :enrolments
   resources :batches
   resources :courses

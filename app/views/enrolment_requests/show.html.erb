@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Course:</strong>
+  <%= @enrolment_request.course.name %>
+</p>
+
+<p>
+  <strong>Batch:</strong>
+  <%= @enrolment_request.batch.name %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @enrolment_request.status %>
+</p>
+
+<%= link_to 'Edit', edit_enrolment_request_path(@enrolment_request) %> |
+<%= link_to 'Back', enrolment_requests_path %>
