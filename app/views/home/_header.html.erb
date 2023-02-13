@@ -8,8 +8,6 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <%= link_to 'Home', root_path, class:"nav-link" %>
-        <%= link_to 'About us', home_about_path, class:"nav-link" %>
-
         <% if user_signed_in? %>
           <% if current_user.role == 'superadmin' || current_user.role == 'admin' %>
             <%= link_to 'Add School', schools_path, class:"nav-link" if current_user.role == 'superadmin' %>

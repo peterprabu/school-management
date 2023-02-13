@@ -4,3 +4,33 @@
 <% else %>
   <h3>Hello, Welcome!
 <% end %>
+<br/><br/>
+
+<% if current_user && current_user.role == 'user' %>
+<h1>My Batches</h1>
+
+<table class="table table-success table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Batch Name</th>
+      <th>Batch Code</th>
+      <th>Batch Description</th>
+      <th>Course Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% batches = Batch.where(id: Enrolment.where(student_id: Student.find_by(email: current_user.email)).pluck(:batch_id)) %>
+    <% batches.each do |batch| %>
+      <tr>
+        <td><%= batch.name %></td>
+        <td><%= batch.code %></td>
+        <td><%= batch.description %></td>
+        <td><%= batch.course.name %></td>
+        <td colspan="3"></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<% end %>

@@ -25,6 +25,7 @@
         <% elsif current_user.role != 'user'%>
           <td><%= button_to 'Approve', approve_enrolment_request_path(enrolment_request), class: 'btn btn-success' %></td>
           <td><%= button_to 'Decline', decline_enrolment_request_path(enrolment_request), class: 'btn btn-danger' %></td>
+          <td colspan="3"></td>
         <% end %>
       </tr>
     <% end %>
