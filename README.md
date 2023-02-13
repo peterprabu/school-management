@@ -15,7 +15,7 @@ The setups steps expect following tools installed on the system.
 git clone git@github.com/peterprabu/school-management.git
 ```
 
-##### 3. Create and setup the database
+##### 2. Create and setup the database
 
 Run the following commands to create and setup the database.
 
@@ -24,7 +24,7 @@ rails db:setup
 rails db:migrate
 ```
 
-##### 4. Start the Rails server
+##### 3. Start the Rails server
 
 You can start the rails server using the command given below.
 
