@@ -1,24 +1,35 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##### Prerequisites
 
-Things you may want to cover:
+The setups steps expect following tools installed on the system.
 
-* Ruby version
+- Github
+- Ruby [2.5.3]
+- Rails [6.0.6.1]
+- PostgreSQL [14.5]
 
-* System dependencies
+##### 1. Check out the repository
 
-* Configuration
+```bash
+git clone git@github.com/peterprabu/school-management.git
+```
 
-* Database creation
+##### 3. Create and setup the database
 
-* Database initialization
+Run the following commands to create and setup the database.
 
-* How to run the test suite
+```ruby
+rails db:setup
+rails db:migrate
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+##### 4. Start the Rails server
 
-* Deployment instructions
+You can start the rails server using the command given below.
 
-* ...
+```ruby
+rails s
+```
+
+And now you can visit the site with the URL http://localhost:3000
