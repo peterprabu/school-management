@@ -39,3 +39,5 @@ rails s
 ```
 
 And now you can visit the site with the URL http://localhost:3000
+
+Note: Students login/signup must be with the email id created by superadmin/admin.
