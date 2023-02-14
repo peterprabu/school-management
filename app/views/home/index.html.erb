@@ -3,7 +3,11 @@
     <p> You have successfully authenticated!
 <% else %>
   <h3>Hello, Welcome!
+  <h6>This is an application that allows for the creation and management of schools, courses, batches, and students by various user types including Admin, School Admin, and Student. With different user types and their respective capabilities, the application offers a flexible and secure platform for educational organisations.<br/>
 <% end %>
+
+<br/>
+<%= image_tag('images.png', id: "image") %>
 <br/><br/>
 
 <% if current_user && current_user.role == 'user' %>
